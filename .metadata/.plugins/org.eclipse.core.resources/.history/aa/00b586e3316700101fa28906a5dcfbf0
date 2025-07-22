@@ -1,0 +1,10 @@
+package decimal.a.binario;
+
+public class decimalABinario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

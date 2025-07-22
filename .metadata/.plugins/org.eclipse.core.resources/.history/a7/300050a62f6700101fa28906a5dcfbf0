@@ -1,0 +1,11 @@
+package invirtiendo.cadenas;
+
+public class Frase extends Cadenas {
+
+	@Override
+	public String invertirCadena() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

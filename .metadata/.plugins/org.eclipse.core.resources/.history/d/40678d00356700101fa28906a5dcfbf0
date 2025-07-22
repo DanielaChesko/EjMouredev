@@ -1,0 +1,27 @@
+package decimal.a.binario;
+
+public class decimalABinario {
+
+	public static String conseguirRestos(int decimal) {
+		String restos = "";
+		
+		if(decimal == 0) {
+			return "" + 0;
+		}
+		
+		if(decimal == 1) {
+			return "" + 1;
+		}
+		
+		while(decimal != 1) {
+			if (decimal % 2 == 0) {
+				restos = restos + "" + 0;
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

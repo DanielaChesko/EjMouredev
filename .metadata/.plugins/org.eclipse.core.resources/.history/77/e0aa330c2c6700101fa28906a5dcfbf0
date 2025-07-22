@@ -1,0 +1,5 @@
+package invirtiendo.cadenas;
+
+public abstract class Cadenas {
+
+}

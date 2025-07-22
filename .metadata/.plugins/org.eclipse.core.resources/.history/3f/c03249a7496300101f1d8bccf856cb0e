@@ -1,0 +1,71 @@
+package area.poligono;
+
+abstract class Poligono {
+	public abstract double calcularArea();
+}
+
+//subclase triangulo
+class Triangulo extends Poligono{
+	private double base, altura;
+	
+	//constructor
+	public Triangulo (double base, double altura) {
+		this.base = base;
+		this.altura = altura;
+	}
+	
+	//recibe metodo de padre
+	public double calcularArea() {
+		return (base * altura) / 2;
+	}
+}
+
+//subclase rectangulo
+class Rectangulo extends Poligono{
+	private double base, altura;
+	
+	//constructor
+	public Rectangulo(double base, double altura) {
+		this.base = base;
+		this.altura = altura;
+	}
+	
+	//recibe metodo de padre
+	public double calcularArea() {
+		return base * altura;
+	}
+}
+
+//subclase cuadrado
+class Cuadrado extends Poligono{
+	private double lado;
+	
+	//constructor
+	public Cuadrado(double lado) {
+		this.lado = lado;
+	}
+	
+	//recibe metodo de padre
+	public double calcularArea() {
+		return lado * lado;
+	}
+}
+
+
+public class Poligono{
+	public static double calcularArea(Poligono poli) {
+		return poli.calcularArea();
+	}
+	
+	public static void main(String[] args) {
+		Poligono triangulo = new Triangulo(3,4);
+		Poligono rectangulo = new Rectangulo(5,6);
+		Poligono cuadrado = new Cuadrado(4);
+		
+		System.out.println("Area triangulo: " + calcularArea(triangulo));
+		System.out.println("Area rectangulo: " + calcularArea(rectangulo));
+		System.out.println("Area cuadrado: " + calcularArea(cuadrado));
+	}
+}
+
+

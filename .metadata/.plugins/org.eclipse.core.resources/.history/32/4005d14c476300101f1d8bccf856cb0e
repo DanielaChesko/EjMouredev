@@ -1,0 +1,87 @@
+package area.poligono;
+
+package area.poligono;
+
+//1. Clase base abstracta 'Poligono'
+//Define el contrato: cualquier polígono sabe calcular su área.
+abstract class Poligono {
+ // Método abstracto: cada subclase DEBE implementarlo.
+ public abstract double calcularArea();
+}
+
+//2. Clase 'Cuadrado' que hereda de 'Poligono'
+class Cuadrado extends Poligono {
+ private double lado;
+
+ // Constructor para crear un Cuadrado con su lado
+ public Cuadrado(double lado) {
+     this.lado = lado;
+ }
+
+ // Implementación específica del cálculo de área para un Cuadrado
+ @Override // Indica que este método sobrescribe uno de la clase padre
+ public double calcularArea() {
+     return lado * lado;
+ }
+}
+
+//3. Clase 'Rectangulo' que hereda de 'Poligono'
+class Rectangulo extends Poligono {
+ private double base;
+ private double altura;
+
+ // Constructor para crear un Rectangulo con su base y altura
+ public Rectangulo(double base, double altura) {
+     this.base = base;
+     this.altura = altura;
+ }
+
+ // Implementación específica del cálculo de área para un Rectangulo
+ @Override
+ public double calcularArea() {
+     return base * altura;
+ }
+}
+
+//4. Clase 'Triangulo' que hereda de 'Poligono'
+class Triangulo extends Poligono {
+ private double base;
+ private double altura;
+
+ // Constructor para crear un Triangulo con su base y altura
+ public Triangulo(double base, double altura) {
+     this.base = base;
+     this.altura = altura;
+ }
+
+ // Implementación específica del cálculo de área para un Triangulo
+ @Override
+ public double calcularArea() {
+     return (base * altura) / 2;
+ }
+}
+
+//Clase principal donde se ejecuta el programa
+public class AreaPoligono {
+
+ // 5. La ÚNICA función que calcula y retorna el área de un polígono.
+ // Recibe como parámetro UN objeto de tipo 'Poligono' (o cualquiera de sus hijos).
+ public static double obtenerAreaPoligono(Poligono p) {
+     // Gracias al polimorfismo, Java sabe qué 'calcularArea()' llamar
+     // (si el del Cuadrado, Rectangulo o Triangulo)
+     return p.calcularArea();
+ }
+
+ public static void main(String[] args) {
+     // Creamos instancias de cada tipo de polígono con sus dimensiones
+     Cuadrado miCuadrado = new Cuadrado(5);
+     Rectangulo miRectangulo = new Rectangulo(4, 6);
+     Triangulo miTriangulo = new Triangulo(7, 3);
+
+     // Calculamos e imprimimos el área de cada polígono
+     // ¡Usando la MISMA función 'obtenerAreaPoligono' para todos!
+     System.out.println("Área del Cuadrado: " + obtenerAreaPoligono(miCuadrado));
+     System.out.println("Área del Rectángulo: " + obtenerAreaPoligono(miRectangulo));
+     System.out.println("Área del Triángulo: " + obtenerAreaPoligono(miTriangulo));
+ }
+}

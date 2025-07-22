@@ -1,0 +1,19 @@
+package invirtiendo.cadenas;
+
+public class Cadena {
+
+	String cadena = "Hola mundo";
+	String cadenaInvertida = "";
+	
+	static String invertir(String cadena) {
+		for (int i = cadena.length() ; i > 0 ;i--) {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

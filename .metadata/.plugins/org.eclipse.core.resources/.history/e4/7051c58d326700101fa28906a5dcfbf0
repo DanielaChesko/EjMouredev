@@ -1,0 +1,13 @@
+package decimal.a.binario;
+
+public class decimalABinario {
+
+	public static int conseguirRestos(int decimal) {
+		String
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

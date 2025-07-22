@@ -1,0 +1,14 @@
+package area.poligono;
+
+public abstract class Poligono {
+
+	public abstract int calcularArea();
+	
+
+
+}
+
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+
+}

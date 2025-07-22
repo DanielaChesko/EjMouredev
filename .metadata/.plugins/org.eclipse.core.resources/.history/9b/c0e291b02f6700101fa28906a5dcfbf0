@@ -1,0 +1,9 @@
+package invirtiendo.cadenas;
+
+public class Frase extends Cadenas {
+	private String cadena;
+	
+	public Frase(String frase) {
+		this.frase = frase;
+	}
+}

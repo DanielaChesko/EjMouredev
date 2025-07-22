@@ -1,0 +1,5 @@
+package area.poligono;
+
+public class Poligono {
+	public abstract double calcularArea();
+}
