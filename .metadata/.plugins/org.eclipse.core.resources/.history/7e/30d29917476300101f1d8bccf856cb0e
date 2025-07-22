@@ -1,9 +1,0 @@
-package area.poligono;
-
-public abstract class Poligono{
-	public abstract int calcularArea();
-}
-
-public class AreaPoligono {
-	
-}
