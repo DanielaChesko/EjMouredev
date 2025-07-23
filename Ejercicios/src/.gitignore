@@ -1,0 +1,15 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Carpetas de Eclipse
+.metadata/
+.settings/
+bin/
+
+# Archivos de Eclipse
+.classpath
+.project
+
+# Archivos de compilación
+*.class
